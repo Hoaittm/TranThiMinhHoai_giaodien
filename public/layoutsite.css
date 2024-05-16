@@ -1,0 +1,498 @@
+body{
+    width:100%;
+}
+.wrap_top_bar {
+    float: left;
+    width: 100%;
+    background:#fff;
+}
+div{
+    display: block;
+    
+    
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.topbar {
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    width: 100%;
+}
+/* 
+.col-md-7 {
+    width: 29px;
+} */
+
+.topbar .topbar_left {
+    font-size: 18px;
+}
+
+/* .icon_style_base {
+    font-size: 18px;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border:1px solid #ff9897;
+    
+    text-align: center;
+} */
+
+ul{
+    margin-top:20px;
+}
+li{
+    margin-right: 15px;
+}
+.wrap_top_bar a{
+    padding-left :5px;
+
+    color:#000;
+    text-decoration: none;
+}
+.mid-header {
+    background-color: #fff3f3;
+    
+}
+.mid-header a{
+    text-decoration: none;  
+    color:#fff;
+}
+.mid-header a:hover{
+    text-decoration: none;  
+    color:#000;
+}
+/* Thu nhỏ phần account và cart */
+.header-main {
+    display: flex; /* Sử dụng flexbox */
+    align-items: center; /* Canh giữa các phần tử theo chiều dọc */
+}
+
+/* Các phần tử con của header-main */
+.header-main > div {
+    display: flex; /* Sử dụng flexbox */
+    align-items: center; /* Canh giữa các phần tử theo chiều dọc */
+    margin-right: 10px; /* Khoảng cách giữa các phần tử */
+}
+
+/* Thu nhỏ phần account và cart */
+.ul-account {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* Ẩn dropdown-content ban đầu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Hiển thị dropdown-content khi hover vào .dropdown */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Mũi tên */
+.arrow-up {
+    display: block; /* Hiển thị mũi tên */
+    position: absolute;
+    top: -15px;
+    left: calc(20% - 10px); /* Đặt vị trí cho mũi tên ở chính giữa */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f9f9f9; /* Màu của mũi tên phải giống background của dropdown-content */
+    z-index: 1; /* Đảm bảo mũi tên hiển thị trên dropdown-content */
+}
+.login{
+    background:#ff9897;
+    border-radius:30px;
+    margin-top:10px;
+    width:140px;
+    height:40px;
+    color:#fff; 
+    text-align:center;
+   line-height:40px;
+   
+}
+
+.signin{
+    background:#6c757d;
+    border-radius:30px;
+    margin-top:10px;
+    width:140px;
+    height:40px;
+    text-align:center;
+   line-height:40px;
+   color: #ffffff;
+}
+/* Màu mặc định của các li */
+
+
+/* Hover effect */
+ .login:hover{
+    background-color:#fff;
+    border:1px solid #ff9897;
+    color: #000000;
+}
+.ul_account .signin:hover {
+    border:1px solid #6c757d;
+    background-color: #fff; /* Màu nền khi hover */
+    color: #000000; /* Màu chữ khi hover */
+}
+
+.ul-account li {
+    display: inline-block;
+    margin-right: 10px; 
+    margin-bottom:10px;/* Khoảng cách giữa các phần tử */
+}
+.hinh{
+    width:50px;
+}
+.top-cart-contain {
+    display: flex; /* Hiển thị các phần tử con theo chiều ngang */
+    align-items: center; /* Canh giữa các phần tử con theo chiều dọc */
+}
+
+/* Để điều chỉnh khoảng cách giữa các phần tử con */
+.top-cart-contain > * {
+    margin-right: 10px; /* Khoảng cách giữa các phần tử con */
+   align-items: center; /* Canh giữa theo chiều dọc */
+}
+
+.wrap_main{
+    background-color:#ff6564;
+    line-height:20px;
+}
+/* Hiển thị menu hàng ngang */
+.header-nav .item_big {
+    display: flex;
+    list-style-type: none; /* Loại bỏ dấu chấm */
+    padding: 0; /* Loại bỏ padding */
+}
+
+/* Căn giữa các mục trong menu hàng ngang */
+.header-nav .item_big li {
+    flex: 1; /* Căn giữa các mục */
+}
+
+/* Thêm khoảng cách giữa các mục */
+.header-nav .item_big li + li {
+    margin-left: 10px; /* Khoảng cách giữa các mục */
+}
+/* Loại bỏ gạch chân và thay đổi màu chữ */
+.header-nav .item_big li a {
+    text-decoration: none; /* Loại bỏ gạch chân */
+    color: #000; /* Màu chữ trắng */
+}
+.header-nav .item_big li a:hover {
+    color: #000000; /* Màu chữ đen */
+}
+/* Ẩn dropdown-content ban đầu */
+.mega-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Hiển thị dropdown-content khi hover vào nav-item */
+.has-mega:hover .mega-content {
+    display: block;
+}
+
+/* Căn lề và độ rộng của dropdown-content */
+.mega-content {
+    width: 220px; /* Điều chỉnh độ rộng */
+    left: 50%; /* Đặt vị trí của mega-content ở giữa theo chiều ngang */
+    transform: translateX(-50%); /* Dịch chuyển mega-content điều chỉnh về trung tâm */
+    float: left;
+    z-index: 1; /* Đảm bảo dropdown hiển thị trên các phần tử khác */
+}
+
+
+
+/* Đảm bảo các phần tử cấp 2 nằm trong phần tử cấp 1 */
+.level1 .level2 {
+    width: 100%;
+}
+/* Loại bỏ dấu chấm ở đầu của phần tử li */
+ul.level0 li {
+    list-style-type: none;
+}
+.nav-item {
+    position: relative;
+}
+
+.item_small {
+    display: none;
+    position: absolute;
+    top: -0px; /* Điều chỉnh vị trí lên trên 10px */
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+.nav-item:hover .item_small {
+    display: block;
+}
+
+.a-img {
+    display: block;
+}
+
+/* Thiết lập các liên kết trong dropdown menu */
+.item_small li {
+    padding: 5px;
+    list-style-type: none;
+
+}
+.mega-content .h4{
+    font-size:14px;
+   
+}
+/* Tạo hiệu ứng cho dropdown menu */
+.item_small li:hover {
+    background-color: #f1f1f1;
+}
+.home-slider img{
+    width:100%;
+}
+.section_brand{
+    padding:30px 20px;
+    background-color:#fff3f3;
+
+
+}
+
+.awe-section-4{
+    width:100vw;
+    background-color:#fff3f3;
+}
+.awe-section-4 .product{
+    width:300px;
+    margin-top:30px;
+    height:500px;
+  
+}
+
+.awe-section-4 .product img{
+
+    width:100%;
+}   
+.awe-section-4 .card-body{
+    
+    height:450px;
+}
+.awe-section-4 .card-body:hover{
+    border:1px solid #ff6564;
+}
+.awe-section-5 .product{
+    width:300px;
+    margin-top:50px;
+    height:500px;
+  
+}
+
+.awe-section-5 .product img{
+
+    width:100%;
+}   
+.awe-section-5 .card-body{
+    
+    height:450px;
+}
+.awe-section-5 .card-body:hover{
+    border:1px solid #ff6564;
+}
+.awe-section-6{
+    width:100vw;
+    background-color:#fff3f3;
+}
+.awe-section-6 .product{
+    width:300px;
+    margin-top:50px;
+    height:500px;
+  
+}
+
+.awe-section-6 .product img{
+
+    width:100%;
+}   
+.awe-section-6 .card-body{
+    
+    height:450px;
+}
+.awe-section-6 .card-body:hover{
+    border:1px solid #ff6564;
+}
+.awe-section-7 .product{
+   margin-left:20px;
+    width:400px;
+    height:500px;
+}
+.awe-section-7 .product img{
+    width:100%;
+}
+.awe-section-7 .card-body{
+    height:450px;
+}
+.mid-footer {
+    background-image: url(https://bizweb.dktcdn.net/100/336/334/themes/939194/assets/bg_cosmetics.jpg?1706112573342);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff; /* Màu chữ trắng */
+}
+
+.mid-footer .widget_first_child h4 span {
+    color: #fff; /* Màu chữ trắng */
+}
+
+.mid-footer .widget_first_child .hotline_footer ul li {
+    color: #fff; /* Màu chữ trắng */
+    padding-bottom: 7px;
+}
+
+.footer .list-menu .li_menu a {
+    color: #fff; /* Màu chữ trắng */
+}
+.footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.follow_option {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Sử dụng flexbox */
+}
+.footer li{
+    list-style-type: none;
+}
+.follow_option li {
+    margin-right: 10px; /* Khoảng cách giữa các phần tử */
+}
+
+.follow_option li:last-child {
+    margin-right: 0; /* Loại bỏ margin-right của phần tử cuối cùng */
+}
+.awe-section-3 {
+    padding: 50px 0; /* Khoảng cách giữa phần tử và nội dung */
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Căn giữa các sản phẩm */
+}
+
+.product-card {
+    width: 250px; /* Độ rộng của mỗi thẻ sản phẩm */
+    margin-bottom: 30px; /* Khoảng cách giữa các thẻ sản phẩm */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ */
+}
+
+.product-image {
+    position: relative;
+}
+
+.discount-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ededed; /* Màu nền của tag giảm giá */
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.product-thumb {
+    width: 100%; /* Độ rộng ảnh sản phẩm */
+    height: auto;
+}
+
+.card-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #ff9897; /* Màu nền của nút */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-brand {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2ecc71; /* Màu của giá sản phẩm */
+}
+.awe-section-3.pre-btn,
+.awe-section-3.nxt-btn {
+    position: absolute; /* Đặt vị trí tuyệt đối để nằm trên slider */
+    top: 70%; /* Đặt vị trí theo chiều dọc ở giữa slider */
+    transform: translateY(-50%); /* Dịch chuyển lên trên 50% để căn giữa */
+    background: transparent; /* Màu nền trong suốt */
+    border: none; /* Không có viền */
+    cursor: pointer; /* Con trỏ chuột là dấu nhấp chuột */
+
+    z-index: 1; /* Đặt z-index cao hơn để nằm trên slider */
+}
+ .product{
+    float:left;
+}
+.pre-btn img,
+.nxt-btn img {
+    width: 30px; /* Độ rộng của hình ảnh nút trượt */
+}
+
+.pre-btn {
+    left: 10px; /* Đặt vị trí của nút trượt trước */
+}
+
+.nxt-btn {
+    right: 10px; /* Đặt vị trí của nút trượt sau */
+}

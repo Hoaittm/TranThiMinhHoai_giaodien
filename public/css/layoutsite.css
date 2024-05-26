@@ -17,7 +17,14 @@ div{
     padding-left: 15px;
     
 }
+.product.card {
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
 
+.product.card:hover {
+    border-color: #ff9897;
+}
 .row {
     margin-right: -15px;
     margin-left: -15px;
@@ -493,4 +500,62 @@ ul.level0 li {
 
 .nxt-btn {
     right: 10px; /* Đặt vị trí của nút trượt sau */
+}
+.contact-container {
+    display: flex;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info-form {
+    flex: 0 0 33.33%; /* 4/12 phần trăm */
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.map {
+    flex: 0 0 66.67%; /* 8/12 phần trăm */
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info div {
+    margin-bottom: 10px;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+}
+/* form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 5px;
+} */
+
+/* input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+} */
+
+input[type="submit_contact"] {
+    background-color: #ff9897;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+input[type="submit_contact"]:hover {
+    background-color: #e57a78;
 }

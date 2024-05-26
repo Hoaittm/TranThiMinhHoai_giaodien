@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Controller;
+namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -9,10 +9,10 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return view('fontend.product');
+        return view('frontend.product');
     }
     public function product_detail($slug)
     {
-        return view ('fontend.product_detail',compat('slug','list'));
+        return view ('frontend.product_detail');
     }
 }

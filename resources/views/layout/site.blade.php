@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/layoutsite.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/contact.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css.map') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
@@ -12,8 +13,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> --}}
+   <!-- In your app.blade.php or main layout file -->
+<link rel="stylesheet" href="{{ asset('node_modules/owl.carousel/dist/assets/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ asset('node_modules/owl.carousel/dist/assets/owl.theme.default.min.css') }}">
+<!-- In your app.blade.php or main layout file -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+
     <title>@yield('title')</title>
 
     <style>
@@ -144,101 +151,9 @@
                 </div>
             </div>
             <div style="background-color: #ff6564" class="wrap_main hidden-xs hidden-sm">
-                <div style=" padding:20px" class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="row row-noGutter-2">
-                                <div class="header-nav">
-                                    <ul class="item_big">
-                                        <li class="nav-item active">
-                                            <a href="#"class="a-img">
-                                                <span>TRANG CHỦ</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#"class="a-img">
-                                                <span>GIỚI THIỆU</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item has-mega ">
-                                            <a href="#"class="a-img">
-                                                <span>SẢN PHẨM</span>
-                                            </a>
-                                            <div class="mega-content">
-                                                <div class="level0-wrapper2">
-                                                    <div class="nav-block nav-block-center">
-                                                        <div class=" parent-mega-menu ">
-                                                            <ul class="level0">
-                                                              <li style="margin-left:10px;margin-top:10px" >Dưỡng da</li>
-                                                              <li>Kem chống nắng</li>
-                                                              <li>Trang điểm</li>
-                                                              <li>Chăm sóc cơ thể</li>
-                                                              <li>Sức khỏe & làm đẹp</li>
-                                                               
-                                                                
-                                                                
-                                                               
-                                                            </ul>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>   
-                                        <li class="nav-item">
-                                            <a class="a-img" href="#">
-                                                <span>KHUYẾN MÃI HOT</span>
-                                            </a>
-                                            
-                                        </li>
-                                        
-                                        <li class="nav-item">
-                                            <a href="#"class="a-img">
-                                                <span>TIN TỨC</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#"class="a-img">
-                                                <span>LIÊN HỆ</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+         <x-main-menu/>
             </div>
-            <section class="awe-section-1">
-                <div class="my">
-                    <div id="carouselExampleControls" class="carousel slide position-relative" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="{{asset('images/slider_1.webp')  }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{asset('images/slider_1.webp')  }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{asset('images/slider_1.webp')  }}" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-            
-                    
-                </div>
-                
-               </section>
+           <x-slider/>
         </header>
 
     <main>
@@ -437,6 +352,13 @@
         </div>
         </footer>
     @yield('footer')
+    <!-- Include jQuery first, then Owl Carousel JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ asset('node_modules/owl.carousel/dist/owl.carousel.min.js') }}"></script>
+<!-- Include jQuery first, then Owl Carousel JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
     <script src="{{ asset('fontawesome/js/all.min.js') }}"></script>

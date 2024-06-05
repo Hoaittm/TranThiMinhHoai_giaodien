@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ttmh_user', function (Blueprint $table) {
+        Schema::create('user', function (Blueprint $table) {
             $table->id();
-            $table->string('name',255)->nullable();
-            $table->string('email',255)->nullable();
-            $table->string('phone',255)->nullable();
-            $table->string('username',255)->nullable();
-            $table->string('password',255)->nullable();
-            $table->string('address',255)->nullable();
-            $table->string('image',255)->nullable();
-            $table->string('roles',50)->admin();
-            $table->unsignedInteger('created_by')->default();
-            $table->unsignedInteger('updatad_by');
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('username');
+            $table->string('password');
+            $table->string('address');
+            $table->string('image');
+            $table->enum('roles', ['admin', 'customer']);           
+            $table->unsignedInteger('created_by');
+            $table->unsignedInteger('updated_by')->nullable();
             $table->unsignedTinyInteger('status')->default(2);
             $table->timestamps();
         });
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ttmh_user');
+        Schema::dropIfExists('user');
     }
 };

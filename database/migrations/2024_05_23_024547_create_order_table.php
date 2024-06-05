@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ttmh_order', function (Blueprint $table) {
+        Schema::create('order', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('user_id');
-            $table->string('name',255);
-            $table->string('phone',255);
-            $table->string('email',255);
-            $table->string('address',255);
-            $table->string('note',255)->nullable();
+            $table->string('name');
+            $table->string('phone');
+            $table->string('email');
+            $table->string('address');
+            $table->string('note')->nullable();
+            $table->timestamps();//created_at, updated_at
             $table->unsignedInteger('updated_by')->nullable();
             $table->unsignedTinyInteger('status')->default(2);
-            $table->timestamps();
         });
     }
 
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ttmh_order');
+        Schema::dropIfExists('order');
     }
 };

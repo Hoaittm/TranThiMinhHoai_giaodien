@@ -1,0 +1,97 @@
+
+@extends('layout.admin')
+@section('title','User')
+@section('content')
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Quản lý thành viên</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Blank Page</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-12 text-right">
+                    <a class="btn btn-sm btn-success" href="user_create.html">
+                        <i class="fas fa-plus"></i> Thêm
+                    </a>
+                    <a class="btn btn-sm btn-danger" href="#">
+                        <i class="fas fa-trash"></i> Thùng rác
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-center" style="width:30px;">#</th>
+                        <th class="text-center" style="width:90px;">Hình</th>
+                        <th>Họ tên</th>
+                        <th>Điện thoại</th>
+                        <th>Email</th>
+                        <th>Quyền</th>
+                        <th class="text-center" style="width:200px;">Chức năng</th>
+                        <th class="text-center" style="width:30px;">ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($list as $row )
+                      <tr>
+                          <td><input type="checkbox" name="user_checkbox" value="1"></td>
+                          <td><img src={{$row->image}} alt="image"></td>
+                          <td>{{$row->name}}</td>
+                          
+                          <td>{{$row->phone}}</td>
+                          <td>{{$row->email}}</td>
+                          <td>{{$row->username}}</td>
+                        
+                  
+                          <td><a href="#" class="btn btn-sm btn-success ">
+                              <i class="fa fa-toggle-on" aria-hidden="true"></i>
+                          </a>
+                          <a href="#" class="btn btn-sm btn-info ">
+                              <i class="fa fa-eye" aria-hidden="true"></i>
+                          </a>
+                          <a href="#" class="btn btn-sm btn-primary ">
+                              <i class="fa fa-edit" aria-hidden="true"></i>
+                          </a>
+                          <a href="#" class="btn btn-sm btn-danger ">
+                              <i class="fa fa-trash" aria-hidden="true"></i>
+                          </a>
+                      </td>
+                      <td>{{$row->id}}</td>
+             
+                      </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+            </table>
+        </div>
+    </div>
+</section>
+          
+    <!-- /.CONTENT -->
+  </div>
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.2.0
+    </div>
+    <strong>All rights reserved.</strong> 
+  </footer>
+  <aside class="control-sidebar control-sidebar-dark">
+  </aside>
+</div>@endsection

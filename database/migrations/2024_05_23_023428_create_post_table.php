@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ttmh_post', function (Blueprint $table) {
-            $table->id(); //id
+        Schema::create('post', function (Blueprint $table) {
+            $table->id();
             $table->unsignedInteger('topic_id')->nullable();
             $table->string('title', 1000);
             $table->string('slug', 1000);
-            $table->mediumText('detail');
+            $table->mediumtext('detail');
             $table->string('image', 1000);
             $table->enum('type', ['post', 'page']);
             $table->text('description')->nullable();
-            $table->unsignedInteger('created_by')->default(1);
-            $table->unsignedInteger('updated_by')->default();
-            $table->timestamps(); //created_at   updated_at
+            $table->timestamps();//created_at, updated_at
+            $table->unsignedInteger('created_by');
+            $table->unsignedInteger('updated_by');
             $table->unsignedTinyInteger('status')->default(2);
         });
     }
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ttmh_post');
+        Schema::dropIfExists('post');
     }
 };

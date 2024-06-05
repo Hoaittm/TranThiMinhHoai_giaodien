@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ttmh_contact', function (Blueprint $table) {
+        Schema::create('contact', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('user_id')->nullable();
-            $table->string('name');
-            $table->string('email');
-            $table->string('phone');
-            $table->string('title');
+            $table->string('name',255);
+            $table->string('email',255);
+            $table->string('phone',255);
+            $table->string('title',255);
             $table->mediumText('content');
             $table->unsignedInteger('reply_id')->default(0);
-            $table->unsignedInteger('update_by')->nullable();
+            $table->unsignedInteger('updated_by')->nullable();
             $table->unsignedTinyInteger('status')->default(2);
-            $table->timestamps();
+            $table->timestamps();//created_at, updated_at
         });
     }
 
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ttmh_contact');
+        Schema::dropIfExists('contact');
     }
 };

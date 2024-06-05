@@ -11,20 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ttmh_product', function (Blueprint $table) {
+        Schema::create('product', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('category_id');
             $table->unsignedInteger('brand_id');
-            $table->string('name',1000)->nullable();
-            $table->string('slug',1000)->nullable();
-            $table->float('price')->nullable();
-            $table->float('pricesale');
-            $table->string('image',1000)->nullable();
-            $table->unsignedInteger('qty')->nullable();
-            $table->mediumText('detail')->nullable();
+            $table->string('name',1000);
+            $table->string('slug',1000);
+            $table->float('price');
+            $table->float('pricesale')->nullable();
+            $table->string('image',1000);
+            $table->unsignedInteger('qty');
+            $table->mediumText('detail');
             $table->string('description',255)->nullable();
-            $table->unsignedInteger('created_by')->default();
-            $table->unsignedInteger('updatad_by');
+            $table->unsignedInteger('created_by');
+            $table->unsignedInteger('updated_by')->nullable();
             $table->tinyInteger('status')->unsigned()->default(2);
             $table->timestamps();
         });
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ttmh_product');
+        Schema::dropIfExists('product');
     }
 };
